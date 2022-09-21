@@ -1,5 +1,10 @@
 package com.example.lesson03.dao;
 
-public interface ReviewDAO {
+import org.springframework.stereotype.Repository;
 
+import com.example.lesson03.model.Review;
+
+@Repository
+public interface ReviewDAO {
+	public Review selectReviewById(int id);
 }
