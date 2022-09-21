@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
-@MapperScan(basePackages = "com.example.*") //db관련 클래스 찾는 annotation
 @SpringBootApplication
 public class SpringExampleApplication {
 
@@ -20,15 +19,6 @@ public class SpringExampleApplication {
 	}
 	
 	// SessionFactory라는 bean을 spring bean으로 만든다.
-	 @Bean
-	    public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
-	        SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
-	        sessionFactory.setDataSource(dataSource);
-
-	        Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mappers/*Mapper.xml");
-	        sessionFactory.setMapperLocations(res);
-
-	        return sessionFactory.getObject();
-	    }
+	 
 
 }
