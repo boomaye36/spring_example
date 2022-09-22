@@ -6,19 +6,19 @@
 <mapper namespace="com.example.lesson03.dao.ReviewDAO">
 	<select id="selectReviewById" parameterType="int"
 		resultType="com.example.lesson03.model.Review">
-		'SELECT'
-		,'id'
-		,'storeId'
-		,'menu'
-		,'userName'
-		,'point'
-		,'review'
-		,'createdAt'
-		,'updatedAt'
-	FROM
-		`new_review`
-	WHERE
-		`id` = #{id}
+		SELECT
+			'id'
+			,'storeId'
+			,'menu'
+			,'userName'
+			,'point'
+			,'review'
+			,'createdAt'
+			,'updatedAt'
+		FROM
+			`new_review`
+		WHERE
+			`id` = #{id}
 	</select>
 </mapper> 
  

@@ -6,6 +6,11 @@ public class Review {
 	private int id;
 	private int storeId;
 	private String menu;
+	private String userName;
+	private double point;
+	private String review;
+	private Date createdAt;
+	private Date updatedAt;
 	public int getId() {
 		return id;
 	}
@@ -54,9 +59,5 @@ public class Review {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	private String userName;
-	private double point;
-	private String review;
-	private Date createdAt;
-	private Date updatedAt;
+	
 }
