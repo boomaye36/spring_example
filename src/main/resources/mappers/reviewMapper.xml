@@ -7,14 +7,14 @@
 	<select id="selectReviewById" parameterType="int"
 		resultType="com.example.lesson03.model.Review">
 		SELECT
-			'id'
-			,'storeId'
-			,'menu'
-			,'userName'
-			,'point'
-			,'review'
-			,'createdAt'
-			,'updatedAt'
+			`id`
+			,`storeId`
+			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
 		FROM
 			`new_review`
 		WHERE
