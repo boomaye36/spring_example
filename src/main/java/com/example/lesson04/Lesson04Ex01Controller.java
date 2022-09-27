@@ -42,7 +42,7 @@ public class Lesson04Ex01Controller {
 	public String getLastUser(Model model) {
 		// 가장 최근에 추가된 사람 한명 가져오기 - db select
 		User user = userBO.getLastUser();
-		//결과 jsp에서 객체값을 꺼내 사용할 수 있다.
+		//결과 jsp에서 객체값을 꺼내 사용할 수 있다."sub
 		model.addAttribute("result", user);
 		model.addAttribute("subject", "회원정보");
 		return "lesson04/getLastUser";
