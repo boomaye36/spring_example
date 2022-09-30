@@ -36,5 +36,18 @@
 	<h1>6. 구분자로 잘라서 배열 만들기 </h1>
 	${fn:split(str1, '.')[0] }<br>
 	${fn:split(str1, '.')[1] }<br>
+	<%-- str2에서 love 추출 --%>
+	<h1>7. 시작 인덱스 종료 인덱스까지 자르기(substring)</h1>
+	${fn:substring(str2, 2, 6)}
+	<h1>모두 소문자로 변경(toLowerCase)</h1>
+	${fn:toLowerCase(str2) }
+	<h1>9. 모두 대문자로 변경(toUpperCase)</h1>
+	${fn:toUpperCase(str2)}
+	<h1>10. 앞 뒤 공백 제거(trim)</h1>
+	<c:set var="str3" value="   hello   "/>
+	<pre>str3: ${str3 }</pre>
+	<pre>str3: ${fn:trim(str3) }</pre>
+	
+	
 </body>
 </html>
