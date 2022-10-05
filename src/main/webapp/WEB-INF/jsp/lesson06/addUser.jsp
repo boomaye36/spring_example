@@ -13,13 +13,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<!-- 외부 스타일 시트 -->
-<link rel="stylesheet" type="text/css" href="quiz05_style.css">
+
 </head>
 <body>
 	<div class="container">
 		<h1>회원정보 추가</h1>
-		<form method="post" action"/lesson06/ex01/add_user">
+		<form method="post" action="/lesson06/ex01/add_user">
 			<div class="form-group">
 				<label for="name">이름</label>
 				<input type="text" id="name" name="name" class="form-control">
@@ -96,6 +95,7 @@
 			alert("이메일을 입력하세요");
 			return ;
 		}
+		let introduce = $('#introduce').val();
 		$.ajax({
 			// request
 			type:"post" //method 방식
@@ -103,7 +103,14 @@
 			, data : {"name":name, "yyyymmdd":yyyymmdd, "email":email, "introduce":introduce}
 			// response
 			, success: function(data){
-				alert(data);
+				//alert(data);
+				if (data == "success"){
+					location.href ="/lesson06/ex01/get_user_view";
+				}
+					
+			}
+			, success: function(data){
+				alert("완료");
 			}
 			, error: function(e){
 				alert("에러" + e);
