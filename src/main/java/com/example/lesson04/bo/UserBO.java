@@ -18,4 +18,8 @@ public class UserBO {
 	public User getLastUser() {
 		return userDAO.selectLastUser();
 	}
+	
+	public boolean existUserByname(String name) {
+		return userDAO.existUserByname(name);
+	}
 }
